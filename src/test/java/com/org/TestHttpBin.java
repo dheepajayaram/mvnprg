@@ -1,4 +1,5 @@
 package com.org;
+
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -25,6 +26,7 @@ public class TestHttpBin {
 	public String baseURL = "http://httpbin.org/";
 	public String postURL = "http://httpbin.org/forms/post";
 	int responseCode = 0;
+	int sucessResponseCode =200;
 	WebDriver driver;
 
 	/*
@@ -37,7 +39,7 @@ public class TestHttpBin {
 	}
 
 	/*
-	 * To test the GET request
+	 * To test the GET request.This test checks for the success response code 
 	 */
 	@Test
 	public void testHTTPGet() {
@@ -49,10 +51,10 @@ public class TestHttpBin {
 		} catch (Exception e) {
 			e.getMessage();
 		}
-		Assert.assertEquals(responseCode, 200);
+		Assert.assertEquals(responseCode, sucessResponseCode);
 	}
 /*
- * To test the httpPOST 
+ * To test the httpPOST. This test checks for the success response code after submitting the input values
  */
 	@Test
 	public void testHTTPPost() throws InterruptedException {
@@ -64,6 +66,8 @@ public class TestHttpBin {
 		driver.findElement(By.name("custname")).sendKeys("xxxxx");
 		driver.findElement(By.name("custtel")).clear();
 		driver.findElement(By.name("custtel")).sendKeys("126357");
+		driver.findElement(By.name("custemail")).clear();
+		driver.findElement(By.name("custemail")).sendKeys("test@test.com");		
 		driver.findElement(By.name("topping")).click();
 		driver.findElement(By.xpath("(//input[@name='size'])[3]")).click();
 		driver.findElement(By.name("comments")).clear();
@@ -71,8 +75,7 @@ public class TestHttpBin {
 
 		if (url.equals(postURL)) {
 
-			driver.findElement(By.xpath("//button")).click();
-			Thread.sleep(5000);
+			driver.findElement(By.xpath("//button")).click();	
 
 			try {
 				responseCode = GetResponse(postURL);
@@ -80,12 +83,12 @@ public class TestHttpBin {
 				e.getMessage();
 			}
 		}
-		Assert.assertEquals(responseCode, 200);
+		Assert.assertEquals(responseCode, sucessResponseCode);
 
 	}
 
 	/*
-	 * This method is for testing
+	 * This method is for testing the response MIME type 
 	 */
 	@Test
 	public static void testMimeType() throws ClientProtocolException, IOException {
