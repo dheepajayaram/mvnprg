@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="com.org.TestHttpBin" duration-ms="9833" started-at="2016-06-18T03:39:51Z" finished-at="2016-06-18T03:40:01Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="9833" started-at="2016-06-18T03:39:51Z" finished-at="2016-06-18T03:40:01Z">
+      <class name="com.org.TestHttpBin">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.org.TestHttpBin@614c5515]" name="launchBrowser" is-config="true" duration-ms="1705" started-at="2016-06-17T20:39:51Z" finished-at="2016-06-17T20:39:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="testHTTPGet()[pri:0, instance:com.org.TestHttpBin@614c5515]" name="testHTTPGet" duration-ms="1361" started-at="2016-06-17T20:39:52Z" finished-at="2016-06-17T20:39:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHTTPGet -->
+        <test-method status="PASS" signature="testHTTPPost()[pri:0, instance:com.org.TestHttpBin@614c5515]" name="testHTTPPost" duration-ms="6554" started-at="2016-06-17T20:39:54Z" finished-at="2016-06-17T20:40:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testHTTPPost -->
+        <test-method status="PASS" signature="testMimeType()[pri:0, instance:com.org.TestHttpBin@614c5515]" name="testMimeType" duration-ms="184" started-at="2016-06-17T20:40:00Z" finished-at="2016-06-17T20:40:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMimeType -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.org.TestHttpBin@614c5515]" name="closeBrowser" is-config="true" duration-ms="2" started-at="2016-06-17T20:40:01Z" finished-at="2016-06-17T20:40:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.org.TestHttpBin -->
+    </test> <!-- Command line test -->
+  </suite> <!-- com.org.TestHttpBin -->
+</testng-results>
